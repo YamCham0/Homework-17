@@ -7,7 +7,7 @@ Introductory paragraph (replace this with your text)
 Email expression that is simple. Numbers and letters are permitted before the @, and top level domains with fewer than two or more than three letters are not permitted.
 ```
 Matching an Email:  
-`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,63})$/`
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,3})$/`
 ```
 ## Table of Contents
 
@@ -29,7 +29,7 @@ The $ anchor denotes a string that ends with the characters that come before it.
 ### Quantifiers
 Quantifiers define the length of the string that your regex will match. They regularly include minimum and maximum number of characters that your regex expects.
 ```
-{2,63} will match 2 to 63.
+{2,3} will match 2 to 3.
 ```
 ### Grouping Constructs
 As regular expressions become more complex, you may want to check multiple parts of a string to see if different sections meet different requirements. You'll need to use grouping constructs to separate these sections.
@@ -37,7 +37,7 @@ Parentheses (()) are the most common way to group a section of a regex. Each sec
 ```
  First group ([a-z0-9_\.-]+)  
 Second group ([\da-z\.-]+)  
-Third gorup ([a-z\.]{2,63})
+Third gorup ([a-z\.]{2,3})
 
 ```
 
